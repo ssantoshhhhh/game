@@ -1,0 +1,336 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: poppins;
+  background: linear-gradient(to right, #f9f9f9, #ececec);
+  background: #cad9cd;
+  color: #b0a6a6;
+}
+
+/* Navigation Styles */
+header {
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  animation: slideDown 1s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+      top: -100px;
+  }
+  to {
+      top: 0;
+  }
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+nav li {
+  margin: 0 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #f39c12;
+}
+/* CSS for the underline effect */
+nav a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #f39c12; /* Change this to your desired underline color */
+  transition: width 0.3s ease-in-out; /* Adjust the transition duration as neede
+/* CSS for the hover effect */
+nav a:hover::before {
+  width: 100%;
+}
+}
+
+/* Parallax Section */
+.parallax {
+  background: url('https://source.unsplash.com/1600x900/?nature') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.parallax .intro {
+  animation: fadeInUp 2s ease;
+}
+
+.parallax .btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #f39c12;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.parallax .btn:hover {
+  background: #e67e22;
+}
+
+/* Section Styles */
+section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+#skills .skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skill-bar {
+  background: #f4f4f4;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition:0.2s ease-in-out;  
+}
+
+
+
+
+
+
+.skill-title {
+  font-weight: 700;
+}
+
+.skill-progress {
+  background: #f39c12;
+  height: 10px;
+  border-radius: 5px;
+  transition: width 1s;
+}
+
+
+.skill-bar:hover {
+  transform: translateY(-10px);
+}
+
+
+#projects .project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-card {
+  background: #fff;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px  rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  flex: 1 1 calc(33% - 30px);
+  box-sizing: border-box;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Form Styles */
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #555;
+}
+
+/* Footer Styles */
+footer {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #f39c12;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: column;
+  }
+
+  .project-card {
+      flex: 1 1 100%;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* CSS for the navigation links */
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #afafaf;
+}
+
+/* CSS for the underline effect */
+nav ul li a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #f39c12; /* Change this to your desired underline color */
+  transition: width 0.3s ease-in-out; /* Adjust the transition duration as needed */
+}
+
+/* CSS for the hover effect */
+nav ul li a:hover::before {
+  width: 100%;
+}
+
+
+
+
+.aboutme{
+  display: block;
+  justify-content: center;
+  background: #555;
+  width: full;
+  color: white;
+  border-radius: 3mm;
+ 
+}
+
+
+
+.about-me {
+  background-color: #f9f9f9; /* Set the background color */
+  padding: 20px; /* Add some padding for spacing */
+  border-radius: 10px; /* Add rounded corners */
+  box-shadow: 0 4px 8px 15px  rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+  transition: 0.3s ease-in-out;
+}
+
+.about-me:hover{
+  box-shadow: 0 4px 12px 18px  rgba(0, 0, 0, 0.1) ;
+  transition: 0.3s ease-in-out;
+}
+
+.about-me p {
+  font-family: poppins;
+  font-size: 16px; /* Adjust the font size */
+  line-height: 1.6; /* Adjust the line height for readability */
+  color: #333; /* Set the text color */
+}
+
+
+/* CSS for the input fields */
+.input-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-container input,
+.input-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.input-container input:focus,
+.input-container textarea:focus {
+  border-color: #f39c12; /* Change this to your desired focus color */
+}
+
+/* CSS for the floating placeholder animation */
+.input-container label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.input-container input:focus + label,
+.input-container textarea:focus + label,
+.input-container input:not(:placeholder-shown) + label,
+.input-container textarea:not(:placeholder-shown) + label {
+  top: 0;
+  font-size: 12px; /* Adjust font size as needed */
+  color: #999; /* Adjust color for floating label */
+}
